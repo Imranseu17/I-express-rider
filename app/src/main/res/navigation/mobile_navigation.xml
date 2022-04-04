@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_delivery">
+
+    <fragment
+        android:id="@+id/navigation_delivery"
+        android:name="com.app.i_express_rider.view.ui.delivery.DeliveryFragment"
+        android:label="@string/title_delivery"
+        tools:layout="@layout/fragment_delivery" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.app.i_express_rider.view.ui.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/navigation_earning"
+        android:name="com.app.i_express_rider.view.ui.EarningFragment"
+        android:label="@string/title_earning"
+        tools:layout="@layout/fragment_earning" />
+
+    <fragment
+        android:id="@+id/navigation_leaderboard"
+        android:name="com.app.i_express_rider.view.ui.LeaderboardFragment"
+        android:label="@string/title_leaderboard"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.app.i_express_rider.view.ui.NotificationFragment"
+        android:label="@string/title_notification"
+        tools:layout="@layout/fragment_notification" />
+</navigation>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">i-express(Rider)</string>
+    <string name="title_delivery">Delivery</string>
+    <string name="title_history">History</string>
+    <string name="title_earning">Earning</string>
+    <string name="title_leaderboard">Leaderboard</string>
+    <string name="title_notification">Notification</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="date_range_clear">Clear date range!</string>
+
+    <string name="on_time_delivery">On time</string>
+    <string name="late_delivery">Late</string>
+    <string name="withdraw_cancel">Withdraw</string>
+    <string name="expired_cancel">Expired</string>
+    <string name="customer_cancel">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="my_api_key">AIzaSyAGm43wa6NsKu9KvoOJPHkYXqimCwGc49E</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_bac">Welcome Back!</string>
+    <string name="log_in">LOG IN</string>
+    <string name="labelledEmail">Email address</string>
+    <string name="remeber_text">Remeber me</string>
+    <string name="not_registe">Not registered yet?</string>
+    <string name="please_ente">Please enter the account that you want to reset the password</string>
+    <string name="not_account">Create an Account</string>
+    <string name="save">Save</string>
+    <string name="explores_wo">Reset Password</string>
+    <string name="new_passwor">New Password</string>
+    <string name="new_password_again">New Password Again</string>
+    <string name="phone_numbe">Phone Number</string>
+    <string name="some_id">+88 555-0133</string>
+    <string name="phone_verif">Phone Verification</string>
+    <string name="enter_your_">Enter your OTP code here</string>
+    <string name="we_will_sen">We Will Send verification to your Phone Number</string>
+    <string name="didn_t_you_">Didn\'t you received any code?</string>
+    <string name="resent_new_">Resent new code</string>
+
+</resources>

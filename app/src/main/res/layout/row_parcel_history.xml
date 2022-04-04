@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp16"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AACVDRYPOW"
+        android:textStyle="bold"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="19 Aug, 08:20PM"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp8"
+        android:paddingEnd="@dimen/dp8"
+        android:paddingTop="@dimen/dp8"
+        android:drawableTint="#4CAF50"
+        android:drawableStart="@drawable/ic_location_on_24"
+        android:text=" Pinewood cafe, Dhaka, 1212"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp8"
+        android:paddingEnd="@dimen/dp8"
+        android:paddingTop="@dimen/dp8"
+        android:drawableTint="@color/red_500"
+        android:drawableStart="@drawable/ic_location_on_24"
+        android:text=" Pinewood cafe, Dhaka, 1212"/>
+
+</LinearLayout>

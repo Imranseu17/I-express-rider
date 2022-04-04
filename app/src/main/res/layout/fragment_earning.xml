@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".view.ui.EarningFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/ic_arrow_left_24"
+        app:title="Earning" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="@dimen/dp16"
+                        android:src="@drawable/ic_profile_avatar" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp16"
+                        android:paddingBottom="@dimen/dp16">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SumOn Hasan"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="01515000000" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/green_100"
+                            android:minWidth="80dp"
+                            android:text="Verified"
+                            android:padding="@dimen/dp8"
+                            android:layout_marginTop="@dimen/dp8"
+                            app:ensureMinTouchTargetSize="false"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_profile_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp8"
+                        app:fabSize="mini"
+                        app:tint="@color/white"
+                        app:backgroundTint="@color/red_300"
+                        app:srcCompat="@drawable/ic_baseline_tune_24"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+                    android:id="@+id/aa_chart_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginEnd="@dimen/dp16"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardPreventCornerOverlap="false">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/white">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Today" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Weekly" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Monthly" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lifetime" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <GridLayout
+                android:id="@+id/GridLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/dp8"
+                    app:cardBackgroundColor="@color/green_100"
+                    app:cardCornerRadius="@dimen/dp16">
+
+                    <LinearLayout
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp16">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Earning" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="৳ 1130"
+                            android:textColor="#4CAF50"
+                            android:textSize="32sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/dp8"
+                    app:cardBackgroundColor="@color/light_green_100"
+                    app:cardCornerRadius="@dimen/dp16">
+
+                    <LinearLayout
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp16">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="236"
+                            android:textColor="#2196F3"
+                            android:textSize="32sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/dp8"
+                    app:cardBackgroundColor="@color/blue_100"
+                    app:cardCornerRadius="@dimen/dp16">
+
+                    <LinearLayout
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp16">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ongoing"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13"
+                            android:textSize="32sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/dp8"
+                    app:cardBackgroundColor="#ffebee"
+                    app:cardCornerRadius="@dimen/dp16">
+
+                    <LinearLayout
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp16">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cancelled"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="15"
+                            android:textColor="@color/red_500"
+                            android:textSize="32sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/onboardrectangle"
+        tools:context=".view.ui.LoginActivity">
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:orientation="vertical"
+            android:background="@drawable/logo_image">
+
+
+
+
+            <TextView
+                android:id="@+id/log_in"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/log_in"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/white"
+                android:layout_marginStart="25dp"
+                android:textAppearance="@style/log_in"
+                android:gravity="bottom"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_below="@id/top_layout">
+
+            <TextView
+                android:id="@+id/phonellabelled"
+                android:layout_width="324dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:text="Phone Number"
+                android:textSize="20sp"
+                android:textAppearance="@style/labelled"
+                android:lineSpacingExtra="7sp"
+                android:translationY="-3.5sp"
+                android:gravity="top"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/codeEt"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="50dp"
+                    android:textSize="15sp"
+                    android:paddingLeft="30dp"
+                    android:drawableRight="@null"
+                    android:paddingRight="20dp"
+                    android:drawableLeft="@drawable/flag"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/mainText"
+                    android:background="@drawable/edit_text_base"
+                    android:fontFamily="@font/calibri"
+                    android:hint="+880"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/phoneEt"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textSize="15sp"
+                    android:drawableRight="@null"
+                    android:paddingRight="20dp"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/mainText"
+                    android:background="@drawable/edit_text_base"
+                    android:fontFamily="@font/calibri"
+                    android:hint="1764310157"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:maxLines="1" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/remeber_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_below="@+id/edit_layout">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/box_rember"
+                android:layout_marginStart="45dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/labelled"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_alignParentTop="true"
+                android:text="@string/remeber_text"
+                android:textAppearance="@style/labelled"
+                android:lineSpacingExtra="6sp"
+                android:translationY="-3sp"
+                android:layout_marginTop="3dp"
+                android:gravity="top"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rectangle_continue"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/remeber_layout"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="55dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/rectangle_1"
+            >
+
+            <TextView
+                android:id="@+id/continue_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Continue"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/calibri"
+                android:textAppearance="@style/log_in"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/not_registe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/not_registe"
+                android:textAppearance="@style/not_registe"
+                android:gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/createAccountLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/not_account"
+                android:textColor="#6342E8"
+                android:textAppearance="@style/not_registe"
+                android:gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+

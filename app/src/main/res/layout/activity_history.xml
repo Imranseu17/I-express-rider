@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".view.ui.EarningFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            app:menu="@menu/menu_search"
+            app:navigationIcon="@drawable/ic_arrow_left_24"
+            app:title="History" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp16"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_ripple_red_200_border_circular"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:duration="500">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/row_placeholder_item" />
+
+                <include layout="@layout/row_placeholder_item" />
+
+                <include layout="@layout/row_placeholder_item" />
+
+                <include layout="@layout/row_placeholder_item" />
+
+                <include layout="@layout/row_placeholder_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/rangeChip"
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp16"
+        android:clickable="false"
+        android:text="01 Aug, 2020 to 07 Aug, 2021"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:chipBackgroundColor="@color/red_500"
+        app:closeIconTint="@color/white"
+        app:ensureMinTouchTargetSize="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

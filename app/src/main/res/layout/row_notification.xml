@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/dp16"
+    android:background="@drawable/bg_white_ripple_red_200_border_circular"
+    android:elevation="3dp">
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_success"
+        android:padding="@dimen/dp16"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="@dimen/dp16">
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Welcome to your professional community. Welcome to your professional community. Welcome to your professional community."/>
+
+        <TextView
+            android:id="@+id/timestmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:text="Recently"/>
+
+    </LinearLayout>
+
+</LinearLayout>
