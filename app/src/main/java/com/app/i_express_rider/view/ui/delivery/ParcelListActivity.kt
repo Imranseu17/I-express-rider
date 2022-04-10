@@ -37,7 +37,8 @@ class ParcelListActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         binding.rvNewParcel.visibility = View.GONE
-        binding.rvNewParcel.adapter = AdapterParcel(this)
+        binding.rvNewParcel.adapter = AdapterParcel(this,
+            AdapterParcel.ORIENTATION.HORIZONTAL)
         binding.rvNewParcel.addItemDecoration(
             DividerItemDecoration(
                 this,

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="@dimen/dp8"
-    android:padding="@dimen/dp16"
     android:background="@drawable/bg_white_ripple_red_200_border_circular"
+    android:elevation="3dp"
     android:orientation="vertical"
-    android:elevation="3dp">
+    android:padding="@dimen/dp16">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,20 +17,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="AACVDRYPOW"
-                android:textStyle="bold"
-                android:textAllCaps="true"/>
+                android:textAllCaps="true"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="19 Aug, 08:20PM"/>
+                android:text="19 Aug, 08:20PM" />
 
         </LinearLayout>
 
@@ -38,45 +38,56 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/red_100"
-            app:chipMinTouchTargetSize="32dp"
-            android:text="Ongoing"/>
+            android:text="Ongoing"
+            app:chipMinTouchTargetSize="32dp" />
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/currentLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/dp8"
-        android:paddingEnd="@dimen/dp8"
-        android:paddingTop="@dimen/dp8"
-        android:drawableTint="@color/green_500"
         android:drawableStart="@drawable/ic_trip_origin_24"
-        android:text=" Pinewood cafe, Dhaka, 1212"/>
+        android:drawableTint="@color/green_500"
+        android:paddingStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/dp8"
+        android:text=" Pinewood cafe, Dhaka, 1212" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/dp8"
-        android:paddingEnd="@dimen/dp8"
-        android:paddingTop="@dimen/dp8"
-        android:drawableTint="@color/red_500"
         android:drawableStart="@drawable/ic_location_on_24"
-        android:text=" Pinewood cafe, Dhaka, 1212"/>
+        android:drawableTint="@color/red_500"
+        android:paddingStart="@dimen/dp8"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/dp8"
+        android:text=" Pinewood cafe, Dhaka, 1212" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/dp16">
+        android:layout_marginTop="@dimen/dp16"
+        android:orientation="horizontal">
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Call"
             android:backgroundTint="@color/red_100"
             android:outlineAmbientShadowColor="@android:color/transparent"
             android:outlineSpotShadowColor="@android:color/transparent"
-            app:icon="@drawable/ic_call_24"/>
+            android:text="Call"
+            app:icon="@drawable/ic_call_24" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:backgroundTint="@color/red_100"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:text="CHAT"
+            app:icon="@drawable/ic_baseline_message_24" />
 
     </LinearLayout>
 

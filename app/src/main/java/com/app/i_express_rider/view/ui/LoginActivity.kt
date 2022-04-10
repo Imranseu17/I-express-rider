@@ -46,6 +46,8 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        binding.codeEt.setText("+880")
+
 
         binding.createAccountLink.setOnClickListener {
              Constant.gotoPhoneActivity = 1
@@ -58,11 +60,12 @@ class LoginActivity : AppCompatActivity() {
         }
             binding.rectangleContinue.setOnClickListener {
 
-                if(!binding.phoneEt.text.toString().trim().equals("")
-                    && valid_mobile(binding.phoneEt.text.toString())){
+                if(!binding.phoneEt.text.toString().trim().equals("") &&
+                    !binding.codeEt.text.toString().trim().equals("") ){
 
                     var intent = Intent(this,PasswordActivity::class.java)
-                    intent.putExtra("number",binding.phoneEt.text.toString().trim())
+                    intent.putExtra("country_code",binding.codeEt.text.toString().trim())
+                    intent.putExtra("phone_number",binding.phoneEt.text.toString().trim())
                     startActivity(intent)
 
                 }else{
@@ -72,13 +75,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    fun valid_mobile ( value:String ):Boolean {
 
-        if(value.matches(Regex("^(?:\\+88|88)?(01[3-9]\\d{8})$"))){
-            return true
-        }else
-            return false
-    }
 
 
 }

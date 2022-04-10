@@ -44,6 +44,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/currentLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_trip_origin_24"
@@ -77,6 +78,16 @@
             android:outlineSpotShadowColor="@android:color/transparent"
             android:text="Call"
             app:icon="@drawable/ic_call_24" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:backgroundTint="@color/red_100"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:text="CHAT"
+            app:icon="@drawable/ic_baseline_message_24" />
 
     </LinearLayout>
 

@@ -1,11 +1,8 @@
 package com.app.i_express_rider.view.ui.delivery
 
 import android.Manifest
-import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.location.Address
 import android.location.Geocoder
 import android.location.Location
 import android.os.Build
@@ -42,12 +39,8 @@ import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.model.TypeFilter
 import com.google.android.libraries.places.api.net.FetchPhotoRequest
 import com.google.android.libraries.places.api.net.PlacesClient
-import com.google.android.libraries.places.widget.Autocomplete
-import com.google.android.libraries.places.widget.AutocompleteActivity
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
-import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
-import java.io.IOException
 import java.util.*
 
 
@@ -71,6 +64,9 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
 
     var placesClient: PlacesClient? = null
 
+
+
+
     private val mLocationCallback: LocationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
             super.onLocationResult(locationResult)
@@ -81,6 +77,8 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
                 firstTimeFlag = false
             }
             showMarker(currentLocation!!)
+
+
         }
     }
 
@@ -149,7 +147,7 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
         })
 
 
-        val adapterParcel = AdapterParcel(requireActivity(), AdapterParcel.ORIENTATION.HORIZONTAL)
+       val adapterParcel = AdapterParcel(requireActivity(), AdapterParcel.ORIENTATION.HORIZONTAL)
         binding.rvAcceptedParcel.adapter = adapterParcel
         binding.rvAcceptedParcel.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -186,31 +184,6 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
         _binding = null
     }
 
-
-
-    fun getLocationFromAddressSource(context: Context, strAddress: String): LatLng? {
-        val coder = Geocoder(context, Locale.getDefault())
-        val address: List<Address>?
-        var p1: LatLng? = null
-        try {
-            // May throw an IOException
-            address = coder.getFromLocationName(strAddress, 50)
-            if (address == null) {
-                return null
-            }
-            if (address != null && address.size > 0) {
-                for (location in address) {
-                    location.latitude
-                    location.longitude
-                    p1 = LatLng(location.latitude, location.longitude)
-                }
-            }
-        } catch (ex: IOException) {
-            ex.printStackTrace()
-        }
-        return p1
-    }
-
     override fun onMapReady(googleMap: GoogleMap) {
         this.googleMap = googleMap;
     }
@@ -239,6 +212,29 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
             locationRequest, mLocationCallback,
             Looper.myLooper()!!
         )
+    }
+
+    private fun getCompleteAddressString(LATITUDE: Double, LONGITUDE: Double): String? {
+        var strAdd = ""
+        val geocoder = Geocoder(requireContext(), Locale.getDefault())
+        try {
+            val addresses = geocoder.getFromLocation(LATITUDE, LONGITUDE, 1)
+            if (addresses != null) {
+                val returnedAddress = addresses[0]
+                val strReturnedAddress = StringBuilder("")
+                for (i in 0..returnedAddress.maxAddressLineIndex) {
+                    strReturnedAddress.append(returnedAddress.getAddressLine(i)).append("\n")
+                }
+                strAdd = strReturnedAddress.toString()
+                Log.e("My address" ,strReturnedAddress.toString())
+            } else {
+                Log.w("My address", "No Address returned!")
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Log.w("My address", "Can not get Address!")
+        }
+        return strAdd
     }
 
     private fun isGooglePlayServicesAvailable(): Boolean {

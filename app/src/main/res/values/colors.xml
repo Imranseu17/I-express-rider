@@ -6,6 +6,7 @@
     <color name="bg">#F4F4F4</color>
     <color name="bg_dark">#E5E5E5</color>
     <color name="gray">#9e9e9e</color>
+    <color name="colorError">#b00020</color>
 
     <!--reds-->
     <color name="red_50">#FFEBEE</color>

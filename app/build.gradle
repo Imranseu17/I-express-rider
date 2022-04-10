@@ -98,6 +98,10 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.9.8'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
 
+    //dialog
+    implementation 'com.github.ahmmedrejowan.CuteToast:CuteToast:1.2'
+
+
 
 
 }

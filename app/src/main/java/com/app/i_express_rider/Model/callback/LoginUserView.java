@@ -1,6 +1,5 @@
 package com.app.i_express_rider.Model.callback;
 
-
 import com.app.i_express_rider.Model.models.Login;
 
 public interface LoginUserView {

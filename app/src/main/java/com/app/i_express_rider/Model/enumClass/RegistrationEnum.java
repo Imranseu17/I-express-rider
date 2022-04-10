@@ -1,0 +1,44 @@
+package com.app.i_express_rider.Model.enumClass;
+
+public enum RegistrationEnum {
+    Registration_SUCCESS(1,201),
+    Registration_FAILED(2,501),
+    ERROR_CODE_100(8,100),
+    ERROR_CODE_406(9,406),
+    SERVER_ERROR(3,999);
+
+
+    private int key;
+    private int code;
+
+    RegistrationEnum(int key, int code) {
+        this.key = key;
+        this.code = code;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public static RegistrationEnum getByCode(int code){
+        for(RegistrationEnum rs : RegistrationEnum.values()){
+            if(rs.code == code) return rs;
+        }
+
+        return null;
+
+
+    }
+}

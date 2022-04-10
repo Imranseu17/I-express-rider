@@ -73,36 +73,69 @@
             android:gravity="top"
             />
 
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_below="@id/phone_numbe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <EditText
-            android:id="@+id/phoneEt"
-            android:layout_width="match_parent"
+            android:id="@+id/codeEt"
+            android:layout_width="@dimen/_100sdp"
             android:layout_height="50dp"
             android:textSize="15sp"
             android:paddingLeft="30dp"
             android:drawableRight="@null"
             android:paddingRight="20dp"
             android:padding="@dimen/_10sdp"
+            android:editable="false"
+            android:focusable="false"
+            android:clickable="false"
             android:layout_marginStart="45dp"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_below="@+id/phone_numbe"
             android:textColor="@color/mainText"
-            android:drawableStart="@drawable/phone_icon"
+            android:drawableStart="@drawable/flag"
             android:background="@drawable/phone_edit_shape"
             android:fontFamily="@font/calibri"
             android:textAppearance="@style/some_id"
             android:hint="@string/some_id"
             android:textAlignment="center"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/phoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="15sp"
+            android:drawableRight="@null"
+            android:paddingRight="20dp"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/mainText"
+            android:drawableStart="@drawable/phone_icon"
+            android:background="@drawable/phone_edit_shape"
+            android:fontFamily="@font/calibri"
+            android:textAppearance="@style/some_id"
+            android:hint="1764310157"
+            android:textAlignment="center"
             android:inputType="number"
             android:maxLines="1" />
+
+    </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/we_will_sen"
             android:layout_width="307dp"
             android:layout_height="22dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_centerInParent="true"
-            android:layout_below="@id/phoneEt"
+            android:layout_below="@id/edit_layout"
             android:text="@string/we_will_sen"
             android:textAppearance="@style/we_will_sen"
             android:lineSpacingExtra="4sp"

@@ -164,16 +164,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
-                    android:src="@drawable/ic_female_white_24dp" />
+                    android:src="@drawable/profile_icon" />
 
                 <TextView
-                    android:id="@+id/gender"
+                    android:id="@+id/middle_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/calibri"
-                    android:text="Gender"
+                    android:text="Middle Name"
                     android:textAppearance="@style/offer"
                     android:textSize="@dimen/dp16"
                     android:textStyle="bold" />
@@ -181,21 +181,23 @@
 
             </LinearLayout>
 
-            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
-                android:id="@+id/spinner"
+            <EditText
+                android:id="@+id/middle_nameEt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:smsp_floatingLabelColor="#1976D2"
-                android:background="@drawable/edit_text_name_bg"
-                app:smsp_hintColor="#808080"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/dp16"
                 android:layout_marginTop="5dp"
-                app:smsp_itemColor="#512DA8"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="@drawable/edit_text_name_bg"
+                android:drawableRight="@null"
+                android:fontFamily="@font/calibri"
+                android:hint="Maximus Gold"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_8sdp"
                 android:textAlignment="center"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                app:smsp_hint="Selected Gender"
-                app:smsp_itemListColor="#7C4DFF"
-                app:smsp_selectedItemListColor="#FF5252" />
+                android:textColor="@color/mainText"
+                android:textSize="15sp" />
 
 
 
@@ -338,7 +340,7 @@
                     android:drawableRight="@null"
                     android:paddingRight="20dp"
                     android:padding="@dimen/_10sdp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginStart="@dimen/dp16"
                     android:layout_marginEnd="30dp"
                     android:textColor="@color/mainText"

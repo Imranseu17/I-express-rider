@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:orientation="vertical"
-            android:background="@drawable/logo_image">
+            android:background="@drawable/delivery_parcel_logo_bg">
 
 
 
@@ -63,7 +63,10 @@
                 android:gravity="top"
                 />
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/edit_text_layout"
+                android:layout_below="@id/phone_numbe"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -75,32 +78,38 @@
                     android:paddingLeft="30dp"
                     android:drawableRight="@null"
                     android:paddingRight="20dp"
-                    android:drawableLeft="@drawable/flag"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"
                     android:padding="@dimen/_10sdp"
                     android:layout_marginStart="45dp"
                     android:layout_marginEnd="30dp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:textColor="@color/mainText"
-                    android:background="@drawable/edit_text_base"
+                    android:drawableStart="@drawable/flag"
+                    android:background="@drawable/phone_edit_shape"
                     android:fontFamily="@font/calibri"
-                    android:hint="+880"
+                    android:textAppearance="@style/some_id"
+                    android:hint="@string/some_id"
                     android:textAlignment="center"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:maxLines="1" />
 
                 <EditText
                     android:id="@+id/phoneEt"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:textSize="15sp"
                     android:drawableRight="@null"
                     android:paddingRight="20dp"
                     android:padding="@dimen/_10sdp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:textColor="@color/mainText"
-                    android:background="@drawable/edit_text_base"
+                    android:drawableStart="@drawable/phone_icon"
+                    android:background="@drawable/phone_edit_shape"
                     android:fontFamily="@font/calibri"
+                    android:textAppearance="@style/some_id"
                     android:hint="1764310157"
                     android:textAlignment="center"
                     android:inputType="number"

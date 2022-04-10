@@ -1,8 +1,10 @@
 package com.app.i_express_rider.Model.enumClass;
 
 public enum LoginEnum {
-    LOGIN_SUCCESS(1,201),
-    LOGIN_FAILED(2,501),
+    Login_SUCCESS(1,201),
+    Login_FAILED(2,501),
+    ERROR_CODE_100(8,100),
+    ERROR_CODE_406(9,406),
     SERVER_ERROR(3,999);
 
 
