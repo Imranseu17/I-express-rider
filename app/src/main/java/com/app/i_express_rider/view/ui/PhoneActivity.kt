@@ -61,6 +61,10 @@ class PhoneActivity : AppCompatActivity(),OTPUserView {
         }
 
         binding.next.setOnClickListener {
+            binding.loadingView.visibility = View.VISIBLE
+            binding.bodyLayout.visibility = View.GONE
+            binding.next.visibility = View.GONE
+
             val code: String = _binding?.codeEt?.text.toString()
             val phone_number: String = _binding?.phoneEt?.text.toString()
             try {

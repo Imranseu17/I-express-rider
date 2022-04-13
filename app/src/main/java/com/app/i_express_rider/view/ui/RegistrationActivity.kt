@@ -15,6 +15,8 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.NestedScrollView
+import com.airbnb.lottie.LottieAnimationView
 import com.app.i_express_rider.Model.Presenter.RegistrationPresenter
 import com.app.i_express_rider.Model.callback.RegistrationUserView
 import com.app.i_express_rider.Model.models.Registration
@@ -79,6 +81,9 @@ class RegistrationActivity : AppCompatActivity(),RegistrationUserView {
 
         findViewById<LinearLayout>(R.id.save).setOnClickListener {
 
+            findViewById<LottieAnimationView>(R.id.loading_view).visibility = View.VISIBLE
+            findViewById<NestedScrollView>(R.id.body_layout).visibility = View.GONE
+
             var email:String = findViewById<EditText>(R.id.emailEt).text.toString().trim()
             var country_code:String? = intent.getStringExtra("country_code")
             var phone_number:String? = intent.getStringExtra("phone_number")
@@ -113,7 +118,7 @@ class RegistrationActivity : AppCompatActivity(),RegistrationUserView {
                     surname,dob,appId,ipAddress,verifyToken,autoLogin)
             }else{
 
-                Toast.makeText(this,"Password and Confirm password will be same",
+                Toast.makeText(this,"Password and Confirm password must be same",
                     Toast.LENGTH_SHORT).show()
             }
 
@@ -145,11 +150,13 @@ class RegistrationActivity : AppCompatActivity(),RegistrationUserView {
 
     override fun onSuccess(registration: Registration?, code: Int) {
         Toast.makeText(this,registration?.message,Toast.LENGTH_SHORT).show()
+        val intent = Intent(
+            this@RegistrationActivity,
+            MainActivity::class.java
+        )
+        intent.putExtra("token",registration?.data)
         startActivity(
-            Intent(
-                this@RegistrationActivity,
-                MainActivity::class.java
-            )
+            intent
         )
     }
 

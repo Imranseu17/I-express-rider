@@ -20,6 +20,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
+import com.app.i_express_rider.Model.Presenter.ShipmentAssignedPresenter
+import com.app.i_express_rider.Model.callback.ShipmentAssignedUserView
+import com.app.i_express_rider.Model.models.Datum
+import com.app.i_express_rider.Model.models.ShipmentAssigned
 import com.app.i_express_rider.R
 import com.app.i_express_rider.databinding.FragmentDeliveryBinding
 import com.app.i_express_rider.view.adapter.AdapterParcel
@@ -42,9 +46,10 @@ import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import java.util.*
+import kotlin.collections.ArrayList
 
 
-class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
+class DeliveryFragment : Fragment() ,OnMapReadyCallback,ShipmentAssignedUserView  {
 
     private val MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 5445
 
@@ -63,9 +68,10 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
     private val binding get() = _binding!!
 
     var placesClient: PlacesClient? = null
+    private lateinit var  shipmentAssignedList:List<Datum>
 
-
-
+    private lateinit var shipmentAssignedPresenter: ShipmentAssignedPresenter
+    private lateinit var token:String
 
     private val mLocationCallback: LocationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
@@ -128,6 +134,7 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
         )
 
 
+
         autocompleteFragmentSource.setOnPlaceSelectedListener(object : PlaceSelectionListener {
             override fun onPlaceSelected(place: Place) {
                 // TODO: Get info about the selected place.
@@ -146,21 +153,23 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
             }
         })
 
+         token = requireActivity().intent.getStringExtra("token")!!
 
-       val adapterParcel = AdapterParcel(requireActivity(), AdapterParcel.ORIENTATION.HORIZONTAL)
-        binding.rvAcceptedParcel.adapter = adapterParcel
-        binding.rvAcceptedParcel.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        PagerSnapHelper().attachToRecyclerView(binding.rvAcceptedParcel)
+        shipmentAssignedPresenter = ShipmentAssignedPresenter(this)
+        shipmentAssignedPresenter.
+        attemptShipmentAssignedList(token,"en",10)
+
 
         binding.fabNewParcel.setOnClickListener {
             val intent = Intent(context, ParcelListActivity::class.java)
+            intent.putExtra("token",token)
             intent.putExtra(Constant.ParcelListModeKey, Constant.ParcelListMode_NEW)
             startActivity(intent)
         }
 
         binding.fabShowAsList.setOnClickListener {
             val intent = Intent(context, ParcelListActivity::class.java)
+            intent.putExtra("token",token)
             intent.putExtra(Constant.ParcelListModeKey, Constant.ParcelListMode_ACEEPTED)
             startActivity(intent)
         }
@@ -313,7 +322,19 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback  {
         googleMap = null
     }
 
+    override fun onSuccess(shipmentAssigned: ShipmentAssigned?, code: Int) {
+       shipmentAssignedList = shipmentAssigned!!.data.data
+        val adapterParcel = AdapterParcel(requireActivity(),
+            shipmentAssignedList,  AdapterParcel.ORIENTATION.HORIZONTAL)
+        binding.rvAcceptedParcel.adapter = adapterParcel
+        binding.rvAcceptedParcel.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        PagerSnapHelper().attachToRecyclerView(binding.rvAcceptedParcel)
+    }
 
+    override fun onError(error: String?, code: Int) {
+       Toast.makeText(requireContext(),error,Toast.LENGTH_SHORT).show()
+    }
 
 
 }

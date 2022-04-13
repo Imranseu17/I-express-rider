@@ -56,22 +56,10 @@ class OTPActivity : AppCompatActivity(),VerifyTokenUserView {
             }
         }
 
-        binding.progressBar.visibility = View.VISIBLE
-        binding.bodyLayout.visibility = View.GONE
-
-
-
         verifyTokenPresenter = VerifyTokenPresenter(this)
 
         //we need to ask user permission to auto read sms
         //we need to ask user permission to auto read sms
-        if(OTP_Receiver().abortBroadcast){
-            binding.progressBar.visibility = View.VISIBLE
-            binding.bodyLayout.visibility = View.GONE
-        }else{
-            binding.progressBar.visibility = View.GONE
-            binding.bodyLayout.visibility = View.VISIBLE
-        }
 
         requestsmspermission()
         OTP_Receiver().setEditText(_binding?.otpView)
@@ -81,6 +69,9 @@ class OTPActivity : AppCompatActivity(),VerifyTokenUserView {
         }
 
         binding.verify.setOnClickListener{
+            binding.loadingView.visibility = View.VISIBLE
+            binding.bodyLayout.visibility = View.GONE
+            binding.verify.visibility = View.GONE
             try {
 
                 var country_code:String? = intent.getStringExtra("country_code")

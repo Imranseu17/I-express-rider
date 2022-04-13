@@ -44,7 +44,18 @@
 
     </RelativeLayout>
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/body_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"

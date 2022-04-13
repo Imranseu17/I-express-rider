@@ -1,13 +1,17 @@
 package com.app.i_express_rider.view.ui.delivery
 
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.test.core.app.ApplicationProvider
 import com.app.i_express_rider.R
 import com.app.i_express_rider.databinding.OrderDetailsBottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -65,6 +69,30 @@ open class OrderDetailsBottomSheet : BottomSheetDialogFragment() {
         binding.btnMakeDelivery.setOnClickListener {
             this.dismiss()
             startActivity(Intent(context, ConfirmDeliveryParcelActivity::class.java))
+        }
+
+        // SharedPreferences
+
+        val pref =
+           context?.getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+        binding.senderName.setText(pref?.getString("sender_name",""))
+        binding.senderAddress.setText(pref?.getString("sender_address",""))
+        binding.senderCallAction.setOnClickListener {
+            val callIntent = Intent(Intent.ACTION_DIAL)
+            callIntent.data = Uri.parse("tel:"+pref?.getString("sender_phone_number",""))
+            context?.startActivity(callIntent)
+        }
+        binding.itemDescription.setText("Description: "+pref?.getString("item_description","")+"\n"
+         + "Weight: "+pref?.getInt("item_weight",0)+" kg"+
+                "\n"+"Volume: "+pref?.getInt("item_volume",0)+" cm3")
+        binding.worth.setText(""+pref!!.getInt("worth",0)+" TK")
+        binding.collectionAmount.setText(""+pref?.getInt("collection_amount",0)+" TK")
+        binding.receiverName.setText(pref?.getString("receiver_name",""))
+        binding.receiverAddress.setText(pref?.getString("receiver_address",""))
+        binding.receiverCallAction.setOnClickListener {
+            val callIntent = Intent(Intent.ACTION_DIAL)
+            callIntent.data = Uri.parse("tel:"+pref?.getString("receiver_phone_number",""))
+            context?.startActivity(callIntent)
         }
     }
 

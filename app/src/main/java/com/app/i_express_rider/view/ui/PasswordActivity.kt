@@ -62,6 +62,9 @@ class PasswordActivity : AppCompatActivity(),LoginUserView
 
         binding.rectangleLogin.setOnClickListener(View.OnClickListener {
 
+            binding.loadingView.visibility = View.VISIBLE
+            binding.bodyLayout.visibility = View.GONE
+
             var type:String? = "phone"
             var country_code:String? = intent.getStringExtra("country_code")
             var phone_number:String? = intent.getStringExtra("phone_number")
@@ -104,11 +107,13 @@ class PasswordActivity : AppCompatActivity(),LoginUserView
 
         override fun onSuccess(login: Login?, code: Int) {
             Toast.makeText(this,login?.message,Toast.LENGTH_SHORT).show()
+            val intent = Intent(
+                this@PasswordActivity,
+                MainActivity::class.java
+            )
+            intent.putExtra("token",login?.data)
             startActivity(
-                Intent(
-                    this@PasswordActivity,
-                    MainActivity::class.java
-                )
+                intent
             )
         }
 

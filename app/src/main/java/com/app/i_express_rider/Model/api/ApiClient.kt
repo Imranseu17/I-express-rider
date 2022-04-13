@@ -15,7 +15,7 @@ import javax.net.ssl.X509TrustManager
 
 class ApiClient {
     private var retrofit: Retrofit? = null
-    var BASE_URL = "http://192.168.0.119/shipping-service-api-main/public/api/v1/"
+    var BASE_URL = "http://192.168.0.119/i-express-service-api/public/api/v1/"
 
     @Synchronized
     fun getAPI(): ApiInterface? {
