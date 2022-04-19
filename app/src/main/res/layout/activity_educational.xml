@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".view.ui.ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/ic_arrow_left_24"
+        app:title="Education/Training Info:" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="PSC/5 Pass"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/psc_5_pass_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:hint="Exam/Degree Title" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="JSC/JDC/8 Pass"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/jsc_jdc_8_pass_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_female_white_24dp"
+                        android:hint="Exam/Degree Title" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="Secondary"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/secondary_type_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_female_white_24dp"
+                        android:hint="Exam/Degree Title" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="Higher Secondary"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/higher_secondary_type_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_female_white_24dp"
+                        android:hint="Exam/Degree Title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="Diploma"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/diploma_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_female_white_24dp"
+                        android:hint="Exam/Degree Title" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="Bachelor/Honors"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/bachelor_honors_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_female_white_24dp"
+                        android:hint="Exam/Degree Title" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="Masters"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/masters_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_female_white_24dp"
+                        android:hint="Exam/Degree Title" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="PhD (Doctor of Philosophy)"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/phd_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_female_white_24dp"
+                        android:hint="Exam/Degree Title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Board Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Result"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infinity"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Year of passing"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Android Developer"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Duration(Years)"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infotech IT"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Achievement"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="03-03-1995"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/next_step"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

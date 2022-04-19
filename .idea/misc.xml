@@ -19,6 +19,7 @@
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/ic_email_white_24dp.xml" value="0.144" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/ic_female_white_24dp.xml" value="0.144" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/ic_location_on_24.xml" value="0.1405" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/line.xml" value="0.1555" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/lock_icon.xml" value="0.144" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/next_icon.xml" value="0.144" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/notification_item_bg.xml" value="0.144" />
@@ -31,8 +32,13 @@
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/reset_pass_background.xml" value="0.1555" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/save_button_bg.xml" value="0.144" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/drawable/sender_chat_card.xml" value="0.1555" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_add_relative.xml" value="0.209375" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_address.xml" value="0.209375" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_chatactivity.xml" value="0.209375" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_confirm_delivery.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_documents_add.xml" value="0.209375" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_educational.xml" value="0.18406593406593408" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_family_info.xml" value="0.1953125" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_feedback.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_main.xml" value="0.1935185185185185" />
@@ -41,10 +47,13 @@
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_password.xml" value="0.2" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_password_register.xml" value="0.209375" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_phone.xml" value="0.22" />
-        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_profile.xml" value="0.209375" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_registration.xml" value="0.25" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_reset_password.xml" value="0.209375" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_social_media.xml" value="0.209375" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_training_and_certification.xml" value="0.209375" />
+        <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/activity_work_experience_add.xml" value="0.1953125" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/fragment_delivery.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/fragment_notification.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/sumon/Documents/i-express-driver-android-master/app/src/main/res/layout/fragment_pick_area.xml" value="0.209375" />

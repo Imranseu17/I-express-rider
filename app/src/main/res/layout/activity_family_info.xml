@@ -14,7 +14,7 @@
         android:layout_height="?actionBarSize"
         android:background="@color/white"
         app:navigationIcon="@drawable/ic_arrow_left_24"
-        app:title="Basic Info" />
+        app:title="Family Info" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -43,17 +43,11 @@
                         android:layout_height="wrap_content"
                         android:background="@color/red_300"
                         android:padding="@dimen/dp16"
-                        android:text="Profile info"
+                        android:text="Family info"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
-                    <ImageView
-                        android:id="@+id/profile_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_margin="@dimen/dp16"
-                        android:src="@drawable/ic_profile_avatar" />
+
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -61,7 +55,7 @@
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="First Name"
+                        android:hint="Father First Name"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
                         app:startIconDrawable="@drawable/ic_person_24"
@@ -70,7 +64,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Imran"
+                            android:text="MD.Leakat"
                             android:textStyle="bold"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +74,7 @@
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Last Name"
+                        android:hint="Father Last Name"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
                         app:startIconDrawable="@drawable/ic_person_24"
@@ -89,7 +83,7 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Khan"
+                            android:text="Ali Khan"
                             android:textStyle="bold"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -100,16 +94,16 @@
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Mobile"
+                        android:hint="Mather First Name"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
-                        app:startIconDrawable="@drawable/ic_call_24"
+                        app:startIconDrawable="@drawable/ic_person_24"
                         app:startIconTint="@color/red_500">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="01515000000"
+                            android:text="Nasima"
                             android:textStyle="bold" />
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -119,46 +113,90 @@
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Email Address"
+                        android:hint="Mother Last Name"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
-                        app:startIconDrawable="@drawable/ic_email_white_24dp"
+                        app:startIconDrawable="@drawable/ic_person_24"
                         app:startIconTint="@color/red_500">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="imran1995bd@gmail.com"
+                            android:text="Akther"
                             android:textStyle="bold" />
 
                     </com.google.android.material.textfield.TextInputLayout>
-                    <com.google.android.material.textfield.TextInputLayout
 
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp16"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red_300"
+                        android:padding="@dimen/dp16"
+                        android:text="Sibling info"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Birth Date"
+                        android:hint="Sibling First Name"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
-                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
+                        app:startIconDrawable="@drawable/ic_person_24"
                         app:startIconTint="@color/red_500">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/birthday_text"
-                            android:focusable="false"
-                            android:cursorVisible="false"
-                            android:inputType="none"
-                            android:text="03-03-1995"
-                            android:textStyle="bold" />
+                            android:text="MD.Leakat"
+                            android:textStyle="bold"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Sibling Last Name"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ali Khan"
+                            android:textStyle="bold"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                     <com.jaredrummler.materialspinner.MaterialSpinner
                         android:id="@+id/marital_status_spinner"
-                        android:hint="Marital Status"
+                        android:hint="Sibling Gender"
                         android:layout_marginEnd="@dimen/_10sdp"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_width="match_parent"
@@ -167,19 +205,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/line"/>
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:id="@+id/gender_spinner"
-                        android:hint="Gender"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:drawableStart="@drawable/ic_female_white_24dp"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Sibling Age"
+                        android:textColorHint="@color/gray"
+                        app:boxBackgroundColor="@color/white"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/red_500">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/line"/>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="27"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
 
                 </LinearLayout>
@@ -193,6 +237,7 @@
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:src="@drawable/next_step"
                 android:layout_gravity="end"/>
+
 
         </LinearLayout>
 

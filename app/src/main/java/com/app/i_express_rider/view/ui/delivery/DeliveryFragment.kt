@@ -20,6 +20,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
+import com.android.volley.AuthFailureError
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.VolleyError
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 import com.app.i_express_rider.Model.Presenter.ShipmentAssignedPresenter
 import com.app.i_express_rider.Model.callback.ShipmentAssignedUserView
 import com.app.i_express_rider.Model.models.Datum
@@ -45,8 +51,8 @@ import com.google.android.libraries.places.api.net.FetchPhotoRequest
 import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
+import org.json.JSONObject
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class DeliveryFragment : Fragment() ,OnMapReadyCallback,ShipmentAssignedUserView  {
@@ -132,6 +138,8 @@ class DeliveryFragment : Fragment() ,OnMapReadyCallback,ShipmentAssignedUserView
                 Place.Field.PHOTO_METADATAS
             )
         )
+
+
 
 
 

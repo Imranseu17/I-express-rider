@@ -14,7 +14,7 @@
         android:layout_height="?actionBarSize"
         android:background="@color/white"
         app:navigationIcon="@drawable/ic_arrow_left_24"
-        app:title="Basic Info" />
+        app:title="Social Media" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -43,17 +43,11 @@
                         android:layout_height="wrap_content"
                         android:background="@color/red_300"
                         android:padding="@dimen/dp16"
-                        android:text="Profile info"
+                        android:text="Social info"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
-                    <ImageView
-                        android:id="@+id/profile_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_margin="@dimen/dp16"
-                        android:src="@drawable/ic_profile_avatar" />
+
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -61,7 +55,7 @@
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="First Name"
+                        android:hint="Facebook Link"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
                         app:startIconDrawable="@drawable/ic_person_24"
@@ -80,7 +74,7 @@
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Last Name"
+                        android:hint="Google Account"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
                         app:startIconDrawable="@drawable/ic_person_24"
@@ -100,10 +94,10 @@
                         android:layout_marginStart="@dimen/dp16"
                         android:layout_marginEnd="@dimen/dp16"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Mobile"
+                        android:hint="Instagram Account"
                         android:textColorHint="@color/gray"
                         app:boxBackgroundColor="@color/white"
-                        app:startIconDrawable="@drawable/ic_call_24"
+                        app:startIconDrawable="@drawable/ic_person_24"
                         app:startIconTint="@color/red_500">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -113,73 +107,7 @@
                             android:textStyle="bold" />
 
                     </com.google.android.material.textfield.TextInputLayout>
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp16"
-                        android:layout_marginEnd="@dimen/dp16"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Email Address"
-                        android:textColorHint="@color/gray"
-                        app:boxBackgroundColor="@color/white"
-                        app:startIconDrawable="@drawable/ic_email_white_24dp"
-                        app:startIconTint="@color/red_500">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="imran1995bd@gmail.com"
-                            android:textStyle="bold" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-                    <com.google.android.material.textfield.TextInputLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp16"
-                        android:layout_marginEnd="@dimen/dp16"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:hint="Birth Date"
-                        android:textColorHint="@color/gray"
-                        app:boxBackgroundColor="@color/white"
-                        app:startIconDrawable="@drawable/ic_calendar_today_white_24dp"
-                        app:startIconTint="@color/red_500">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/birthday_text"
-                            android:focusable="false"
-                            android:cursorVisible="false"
-                            android:inputType="none"
-                            android:text="03-03-1995"
-                            android:textStyle="bold" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:id="@+id/marital_status_spinner"
-                        android:hint="Marital Status"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/line"/>
-                    <com.jaredrummler.materialspinner.MaterialSpinner
-                        android:id="@+id/gender_spinner"
-                        android:hint="Gender"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:drawableStart="@drawable/ic_female_white_24dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/line"/>
 
 
                 </LinearLayout>
