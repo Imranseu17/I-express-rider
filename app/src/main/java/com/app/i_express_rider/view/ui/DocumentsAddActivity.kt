@@ -6,14 +6,12 @@ import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
-import com.app.i_express_rider.R
-import com.app.i_express_rider.databinding.ActivityAddRelativeBinding
-import com.app.i_express_rider.databinding.ActivityAddressBinding
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.app.i_express_rider.databinding.ActivityDocumentsAddBinding
 import java.io.*
 
@@ -21,6 +19,7 @@ class DocumentsAddActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDocumentsAddBinding
     val TAKE_PICTURE_FROM_GALLERY_NATIONAL_ID = 1
     val TAKE_PICTURE_FROM_GALLERY_DRIVING_LICICENSE = 2
+    var currentImageView: ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDocumentsAddBinding.inflate(layoutInflater)
@@ -31,9 +30,14 @@ class DocumentsAddActivity : AppCompatActivity() {
 
         binding.toolbar.setOnClickListener { finish() }
 
-        binding.nationalID.setOnClickListener { selectImage() }
+        binding.nationalID.setOnClickListener {
+            currentImageView = it as ImageView?
+            selectImage()
+        }
 
-        binding.drivingLicense.setOnClickListener { selectImage() }
+        binding.drivingLicense.setOnClickListener {
+            currentImageView = it as ImageView?
+            selectImage() }
     }
 
     private fun selectImage() {
@@ -61,8 +65,6 @@ class DocumentsAddActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        when(requestCode){
-            TAKE_PICTURE_FROM_GALLERY_NATIONAL_ID  ->{
                 if (resultCode == RESULT_OK) {
                     if (requestCode == 1) {
                         var f = File(Environment.getExternalStorageDirectory().toString())
@@ -103,87 +105,19 @@ class DocumentsAddActivity : AppCompatActivity() {
                             e.printStackTrace()
                         }
                     } else if (requestCode == 2) {
-                        val selectedImage: Uri = data?.data!!
-                        val filePath = arrayOf(MediaStore.Images.Media.DATA)
-                        val c: Cursor? = contentResolver.
-                        query(selectedImage, filePath, null, null, null)
-                        c?.moveToFirst()
-                        val columnIndex: Int = c!!.getColumnIndex(filePath[0])
-                        val picturePath: String = c.getString(columnIndex)
-                        c.close()
-                        val thumbnail = BitmapFactory.decodeFile(picturePath)
-                        Log.w(
-                            "path image from gallery",
-                            picturePath + ""
-                        )
-                        binding.nationalID.setImageBitmap(thumbnail)
-                    }
-
-
-                }
-            }
-            TAKE_PICTURE_FROM_GALLERY_DRIVING_LICICENSE  ->{
-                if (resultCode == RESULT_OK) {
-                    if (requestCode == 1) {
-                        var g = File(Environment.getExternalStorageDirectory().toString())
-                        for (temp1 in g.listFiles()) {
-                            if (temp1.getName().equals("temp1.jpg")) {
-                                g = temp1
-                                break
+                        when(requestCode){
+                            TAKE_PICTURE_FROM_GALLERY_NATIONAL_ID ->{
+                                val selectedImage: Uri = data?.data!!
+                                currentImageView?.setImageURI(selectedImage)
                             }
-                        }
-                        try {
-                            val bitmap1: Bitmap
-                            val bitmapOptions1 = BitmapFactory.Options()
-                            bitmap1 = BitmapFactory.decodeFile(
-                                g.getAbsolutePath(),
-                                bitmapOptions1
-                            )
-                            binding.drivingLicense.setImageBitmap(bitmap1)
-                            val path1: String = (Environment
-                                .getExternalStorageDirectory()
-                                    ).toString()+ File.separator+
-                                    "Phoenix" + File.separator.toString() + "default"
-                            g.delete()
-                            var outFile1: OutputStream? = null
-                            val file1 = File(path1, System.currentTimeMillis().toString() + ".jpg")
-                            try {
-                                outFile1 = FileOutputStream(file1)
-                                bitmap1.compress(Bitmap.CompressFormat.JPEG, 85, outFile1)
-                                outFile1.flush()
-                                outFile1.close()
-                            } catch (e: FileNotFoundException) {
-                                e.printStackTrace()
-                            } catch (e: IOException) {
-                                e.printStackTrace()
-                            } catch (e: Exception) {
-                                e.printStackTrace()
+                            TAKE_PICTURE_FROM_GALLERY_DRIVING_LICICENSE ->{
+                                val uri: Uri = data?.data!!
+                                currentImageView?.setImageURI(uri)
                             }
-                        } catch (e: Exception) {
-                            e.printStackTrace()
+
                         }
-                    } else if (requestCode == 2) {
-                        val selectedImage1: Uri = data?.data!!
-                        val filePath1 = arrayOf(MediaStore.Images.Media.DATA)
-                        val d: Cursor? = contentResolver.
-                        query(selectedImage1, filePath1, null, null, null)
-                        d?.moveToFirst()
-                        val columnIndex1: Int = d!!.getColumnIndex(filePath1[0])
-                        val picturePath1: String = d.getString(columnIndex1)
-                        d.close()
-                        val thumbnail1 = BitmapFactory.decodeFile(picturePath1)
-                        Log.w(
-                            "path image from gallery",
-                            picturePath1 + ""
-                        )
-                        binding.drivingLicense.setImageBitmap(thumbnail1)
+
                     }
-
-
-                }
-            }
-
-
         }
     }
 }
